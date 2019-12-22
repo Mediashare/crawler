@@ -1,0 +1,22 @@
+{
+    "name": "mediashare/crawler",
+    "description": "Crawl all the urls of a webpage and provide a DomCrawler.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mediashare",
+            "email": "mediashare.supp@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Mediashare\\Crawler\\": "src/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "tracy/tracy": "^2.7"
+    }
+}
