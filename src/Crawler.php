@@ -13,8 +13,8 @@ use Mediashare\Crawler\Entity\Crawl;
 Class Crawler
 {
     public $url;
-    public $urls = [];
-    public $crawled = [];
+    public $wait = [];
+    public $urls = []; // Urls
     function __construct(string $url) {
         $this->url = $url;
     }
@@ -22,26 +22,26 @@ Class Crawler
     public function run() {
         // Scrape first page for get more urls
         $scraper = $this->scrape($this->url);
-        $this->crawled[$this->url] = $scraper;
+        $this->urls[$this->url] = $scraper;
 
-        while (count($this->urls)) {
-            foreach ($this->urls as $url) {
+        while (count($this->wait)) {
+            foreach ($this->wait as $url) {
                 $scraper = $this->scrape($url);
-                $this->crawled[(string) $url] = $scraper;
-                unset($this->urls[(string) $url]);
+                $this->urls[(string) $url] = $scraper;
+                unset($this->wait[(string) $url]);
             }
-        }        
+        }
+        unset($this->wait);
 		return $this;
     }
 
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
-        
         // Add new urls
         foreach ($scraper->webpage->links as $link) {
-            if ($link->isInternal && !isset($this->crawled[(string) $link])):
-                $this->urls[(string) $link] = (string) $link;
+            if ($link->isInternal && !isset($this->urls[(string) $link])):
+                $this->wait[(string) $link] = (string) $link;
             endif;
         }
 
