@@ -43,16 +43,16 @@ Class Crawler
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
-        // Add new urls
+        // Add new urls in the wait list
         foreach ($scraper->webpage->links as $link) {
             if ($link->isInternal && !isset($this->urls[(string) $link])):
                 $this->wait[(string) $link] = (string) $link;
             endif;
         }
-        
         $this->urls[(string) $url] = $scraper; // Record Scraper
         unset($this->wait[(string) $url]); // Remove url to the list
         $this->output($url); // Output
+
         return $scraper;
     }
     
