@@ -4,7 +4,6 @@ namespace Mediashare\Crawler;
 class Config {
     public $webspider = true; // Crawl all website
     public $verbose = false; // Prompt ouput (verbose & debug mode)
-    public $json = false; // Prompt json output
 
     public function getWebspider(): ?bool
     {
@@ -25,17 +24,6 @@ class Config {
     public function setVerbose(bool $verbose): self
     {
         $this->verbose = $verbose;
-        return $this;
-    }
-
-    public function getJson(): ?bool
-    {
-        return $this->json;
-    }
-
-    public function setJson(bool $json): self
-    {
-        $this->json = $json;
         return $this;
     }
 }

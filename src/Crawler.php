@@ -26,14 +26,11 @@ Class Crawler
     public function run() {
         // Scrape first page for get more urls
         $scraper = $this->scrape($this->url);
-        $this->urls[$this->url] = $scraper;
 
         if ($this->config->getWebspider()):
             while (count($this->wait)) { // Process if urls in wait list
                 foreach ($this->wait as $url):
                     $scraper = $this->scrape($url);
-                    $this->urls[(string) $url] = $scraper;
-                    unset($this->wait[(string) $url]);
                 endforeach;
             }
         endif;
@@ -52,7 +49,10 @@ Class Crawler
                 $this->wait[(string) $link] = (string) $link;
             endif;
         }
-        $this->output($url);
+        
+        $this->urls[(string) $url] = $scraper; // Record Scraper
+        unset($this->wait[(string) $url]); // Remove url to the list
+        $this->output($url); // Output
         return $scraper;
     }
     
