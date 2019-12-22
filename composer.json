@@ -15,7 +15,9 @@
             "Mediashare\\Crawler\\": "src/"
         }
     },
-    "require": {},
+    "require": {
+        "mediashare/scraper": "^0.0.1"
+    },
     "require-dev": {
         "tracy/tracy": "^2.7"
     }
