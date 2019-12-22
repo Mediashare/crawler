@@ -1,5 +1,5 @@
 # Crawler
-:dizzy: Crawl all the urls of a webpage and provide a DomCrawler.
+:dizzy: Crawl urls from a webpage and provide a DomCrawler with Scraper Library
 
 ## Installation
 ```bash

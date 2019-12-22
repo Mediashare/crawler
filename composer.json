@@ -1,6 +1,6 @@
 {
     "name": "mediashare/crawler",
-    "description": "Crawl urls from a webpage and provide a DomCrawler.",
+    "description": "Crawl urls from a webpage and provide a DomCrawler with Scraper Library",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,8 @@
         }
     },
     "require": {
-        "mediashare/scraper": "^0.0.4"
+        "mediashare/scraper": "^0.0.4",
+        "league/climate": "^3.5"
     },
     "require-dev": {
         "tracy/tracy": "^2.7"
