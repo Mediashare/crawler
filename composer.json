@@ -1,6 +1,7 @@
 {
     "name": "mediashare/crawler",
     "description": "Crawl urls from a webpage and provide a DomCrawler with Scraper Library",
+    "keywords": ["crawler", "crawl", "crawling", "scraper", "scraping", "scrape", "dom", "domcrawler"],
     "type": "library",
     "license": "MIT",
     "authors": [
