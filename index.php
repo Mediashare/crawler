@@ -2,6 +2,6 @@
 require 'vendor/autoload.php';
 
 use Mediashare\Crawler\Crawler;
-$crawler = new Crawler("http://marquand.pro/6/projet");
+$crawler = new Crawler("http://slote.me");
 $crawler->run();
 dump($crawler);

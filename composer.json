@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "mediashare/scraper": "^0.0.1"
+        "mediashare/scraper": "^0.0.2"
     },
     "require-dev": {
         "tracy/tracy": "^2.7"
