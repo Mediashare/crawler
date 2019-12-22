@@ -1,5 +1,7 @@
 # Crawler
-:dizzy: Crawl urls from a webpage and provide a DomCrawler with Scraper Library
+:dizzy: Crawl urls from a webpage and provide a DomCrawler with [Scraper Library](https://github.com/Mediashare/scraper)
+### DomCrawler
+Scraper use DomCrawler library. This is symfony component for DOM navigation for HTML and XML documents. You can retrieve [Documentation Here](https://symfony.com/doc/current/components/dom_crawler.html#usage).
 
 ## Installation
 ```bash
