@@ -1,6 +1,6 @@
 {
     "name": "mediashare/crawler",
-    "description": "Crawl all the urls of a webpage and provide a DomCrawler.",
+    "description": "Crawl urls from a webpage and provide a DomCrawler.",
     "type": "library",
     "license": "MIT",
     "authors": [
