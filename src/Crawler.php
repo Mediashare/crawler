@@ -64,13 +64,13 @@ Class Crawler
             $message = "(".$counter."/".$max_counter.") [".$url."]"; 
             $pourcent = ($counter/$max_counter) * 100;
             if ($pourcent >= 90):
-                $climate->green();
-            elseif ($pourcent >= 75):
                 $climate->lightGreen();
+                elseif ($pourcent >= 75):
+                    $climate->green();
             elseif ($pourcent >= 50):
-                $climate->blue();
-            else:
                 $climate->cyan();        
+            else:
+                $climate->blue();
             endif;
             $progress = $climate->progress()->total($max_counter);        
             $progress->advance($counter, $message);

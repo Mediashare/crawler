@@ -8,6 +8,6 @@ $config = new Config();
 $config->setWebspider(true);
 $config->setVerbose(true);
 
-$crawler = new Crawler("http://marquand.pro", $config);
+$crawler = new Crawler("http://slote.me", $config);
 $crawler->run();
 // dump($crawler);
