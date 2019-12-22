@@ -17,7 +17,7 @@ Class Crawler
     public $config;
     public $urls = [];
     public $wait = []; // Urls list not crawled
-    function __construct(string $url, ?Config $config) {
+    function __construct(string $url, ?Config $config = null) {
         $this->url = $url;
         if (!$config): $config = new Config(); endif; // Init Config if not exist
         $this->config = $config;
