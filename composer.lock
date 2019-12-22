@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "308c8db80ee1d943526269118198fe26",
+    "content-hash": "040d32205ed11e8e18405d031063f749",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -197,16 +197,16 @@
         },
         {
             "name": "mediashare/scraper",
-            "version": "0.0.2",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediashare/scraper.git",
-                "reference": "98d6114d79139d886b0d985a44b8a59479ab9e10"
+                "reference": "a62af09a64b31a7bfd1501ce8023cf80fbb8242d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/98d6114d79139d886b0d985a44b8a59479ab9e10",
-                "reference": "98d6114d79139d886b0d985a44b8a59479ab9e10",
+                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/a62af09a64b31a7bfd1501ce8023cf80fbb8242d",
+                "reference": "a62af09a64b31a7bfd1501ce8023cf80fbb8242d",
                 "shasum": ""
             },
             "require": {
@@ -234,7 +234,7 @@
                 }
             ],
             "description": "Scrapes the information from the targeted page and provides a DomCrawler",
-            "time": "2019-12-22T20:07:02+00:00"
+            "time": "2019-12-22T20:30:09+00:00"
         },
         {
             "name": "psr/http-message",
