@@ -11,11 +11,22 @@ composer require mediashare/crawler
 require 'vendor/autoload.php';
 
 use Mediashare\Crawler\Crawler;
+
+$crawler = new Crawler("http://marquand.pro");
+$crawler->run();
+dump($crawler);
+```
+##### With Config
+```php
+<?php
+require 'vendor/autoload.php';
+
+use Mediashare\Crawler\Crawler;
 use Mediashare\Crawler\Config;
 
 $config = new Config();
 $config->setWebspider(true); // All website crawling
-$config->setVerbose(true);
+$config->setVerbose(true); // Prompt progress bar
 
 $crawler = new Crawler("http://marquand.pro", $config);
 $crawler->run();
