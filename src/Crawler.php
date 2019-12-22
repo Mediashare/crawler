@@ -40,6 +40,12 @@ Class Crawler
 		return $this;
     }
 
+    /**
+     * Get DomCrawler & more data from the webpage
+     *
+     * @param string $url
+     * @return Scraper
+     */
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
@@ -56,6 +62,12 @@ Class Crawler
         return $scraper;
     }
     
+    /**
+     * Output with progress bar
+     *
+     * @param string $url
+     * @return progressBar
+     */
     private function output(string $url) {
         if ($this->config->getVerbose()) {
             $climate = new CLImate();

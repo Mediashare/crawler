@@ -1,9 +1,13 @@
 <?php
 namespace Mediashare\Crawler;
 
+/**
+ * Config
+ * Add more options and edit crawling action.
+ */
 class Config {
     public $webspider = true; // Crawl all website
-    public $verbose = false; // Prompt ouput (verbose & debug mode)
+    public $verbose = false; // Prompt output progress bar
 
     public function getWebspider(): ?bool
     {
