@@ -17,7 +17,7 @@
         }
     },
     "require": {
-        "mediashare/scraper": "^0.0.7",
+        "mediashare/scraper": "*",
         "league/climate": "^3.5"
     },
     "require-dev": {

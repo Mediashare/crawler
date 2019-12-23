@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3967bd53fd1d49d53ca4a96032b0bc4",
+    "content-hash": "a5e204c1521dfe250e5585178ffcb107",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -258,7 +258,7 @@
         },
         {
             "name": "mediashare/scraper",
-            "version": "0.0.7",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediashare/scraper.git",
