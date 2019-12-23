@@ -34,9 +34,6 @@ Class Crawler
                 endforeach;
             }
         endif;
-
-        unset($this->wait); // Reset variable for output
-
 		return $this;
     }
 
