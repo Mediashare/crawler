@@ -10,7 +10,7 @@
             "email": "mediashare.supp@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "autoload": {
         "psr-4": {
             "Mediashare\\Crawler\\": "src/"
