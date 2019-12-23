@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a37c4104dd8a39f42939e0f96f4a7233",
+    "content-hash": "c3967bd53fd1d49d53ca4a96032b0bc4",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.1",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0274c05370a7bc9bb3a33838858253418bd7d14b"
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0274c05370a7bc9bb3a33838858253418bd7d14b",
-                "reference": "0274c05370a7bc9bb3a33838858253418bd7d14b",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-21T08:51:15+00:00"
+            "time": "2019-12-23T11:57:10+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -258,16 +258,16 @@
         },
         {
             "name": "mediashare/scraper",
-            "version": "0.0.4",
+            "version": "0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediashare/scraper.git",
-                "reference": "a62af09a64b31a7bfd1501ce8023cf80fbb8242d"
+                "reference": "63aba006ff0bdb1056bc19bb3e95678e1705243f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/a62af09a64b31a7bfd1501ce8023cf80fbb8242d",
-                "reference": "a62af09a64b31a7bfd1501ce8023cf80fbb8242d",
+                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/63aba006ff0bdb1056bc19bb3e95678e1705243f",
+                "reference": "63aba006ff0bdb1056bc19bb3e95678e1705243f",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +295,15 @@
                 }
             ],
             "description": "Scrapes the information from the targeted page and provides a DomCrawler",
-            "time": "2019-12-22T20:30:09+00:00"
+            "keywords": [
+                "crawler",
+                "dom",
+                "domcrawler",
+                "scrape",
+                "scraper",
+                "scraping"
+            ],
+            "time": "2019-12-23T15:32:06+00:00"
         },
         {
             "name": "psr/http-message",
