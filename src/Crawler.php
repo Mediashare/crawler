@@ -77,7 +77,7 @@ Class Crawler
                 elseif ($pourcent >= 75):
                     $climate->green();
             elseif ($pourcent >= 50):
-                $climate->cyan();        
+                $climate->cyan();
             else:
                 $climate->blue();
             endif;
