@@ -69,7 +69,11 @@ Class Crawler
         if ($this->config->getVerbose()) {
             $climate = new CLImate();
             $counter = count($this->urls);
-            $max_counter = $counter + \count($this->wait);
+            if ($this->config->getWebspider()):
+                $max_counter = $counter + \count($this->wait);
+            else:
+                $max_counter = 1;
+            endif;
             $message = "(".$counter."/".$max_counter.") [".$url."]"; 
             $pourcent = ($counter/$max_counter) * 100;
             if ($pourcent >= 90):
