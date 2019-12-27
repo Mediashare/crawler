@@ -258,16 +258,16 @@
         },
         {
             "name": "mediashare/scraper",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediashare/scraper.git",
-                "reference": "63aba006ff0bdb1056bc19bb3e95678e1705243f"
+                "reference": "4fbe22ca9cf6de6b9560f1873ebbd4de8f8fe673"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/63aba006ff0bdb1056bc19bb3e95678e1705243f",
-                "reference": "63aba006ff0bdb1056bc19bb3e95678e1705243f",
+                "url": "https://api.github.com/repos/Mediashare/scraper/zipball/4fbe22ca9cf6de6b9560f1873ebbd4de8f8fe673",
+                "reference": "4fbe22ca9cf6de6b9560f1873ebbd4de8f8fe673",
                 "shasum": ""
             },
             "require": {
@@ -303,7 +303,7 @@
                 "scraper",
                 "scraping"
             ],
-            "time": "2019-12-23T15:32:06+00:00"
+            "time": "2019-12-27T19:51:11+00:00"
         },
         {
             "name": "psr/http-message",
