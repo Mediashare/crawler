@@ -69,11 +69,10 @@ Class Crawler
                 }
             endif;
             if (!empty($requires)):
+                $crawl = false;
                 foreach ($requires as $require) {
                     if (\strpos((string) $link, $require) !== false):
                         $crawl = true;
-                    else:
-                        $crawl = false;
                     endif;
                 }
             endif;
