@@ -14,7 +14,7 @@ require 'vendor/autoload.php';
 
 use Mediashare\Crawler\Crawler;
 
-$crawler = new Crawler("http://marquand.pro");
+$crawler = new Crawler("https://mediashare.fr");
 $crawler->run();
 dump($crawler);
 ```
@@ -29,8 +29,10 @@ use Mediashare\Crawler\Config;
 $config = new Config();
 $config->setWebspider(true); // All website crawling
 $config->setVerbose(true); // Prompt progress bar
+$config->setPathRequires(['/Kernel/']); // Not crawl other path
+$config->setPathExceptions(['/CodeSnippet/']); // Not crawl this path
 
-$crawler = new Crawler("http://marquand.pro", $config);
+$crawler = new Crawler("https://mediashare.fr", $config);
 $crawler->run();
 dump($crawler);
 ```

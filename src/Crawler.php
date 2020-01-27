@@ -47,16 +47,44 @@ Class Crawler
         $scraper = new Scraper($url);
         $scraper->run();
         // Add new urls in the wait list
-        foreach ($scraper->webpage->links as $link) {
-            if ($link->isInternal && !isset($this->urls[(string) $link])):
-                $this->wait[(string) $link] = (string) $link;
-            endif;
-        }
+        $this->newUrls($scraper);
         $this->urls[(string) $url] = $scraper; // Record Scraper
         unset($this->wait[(string) $url]); // Remove url to the list
         $this->output($url); // Output
 
         return $scraper;
+    }
+
+    private function newUrls($scraper) {
+        $exceptions = $this->config->getPathExceptions();
+        $requires = $this->config->getPathRequires();
+        foreach ($scraper->webpage->links as $link) {
+            $crawl = true;
+            // Check path Requires & path Exceptions
+            if (!empty($exceptions)):
+                foreach ($exceptions as $exception) {
+                    if (\strpos((string) $link, $exception) !== false):
+                        $crawl = false;
+                    endif;
+                }
+            endif;
+            if (!empty($requires)):
+                foreach ($requires as $require) {
+                    if (\strpos((string) $link, $require) !== false):
+                        $crawl = true;
+                    else:
+                        $crawl = false;
+                    endif;
+                }
+            endif;
+
+            // Check if is internal link & if not already in queue
+            if ($crawl):
+                if ($link->isInternal && !isset($this->urls[(string) $link])):
+                    $this->wait[(string) $link] = (string) $link;
+                endif;
+            endif;
+        }
     }
     
     /**

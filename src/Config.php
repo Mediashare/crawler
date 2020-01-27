@@ -8,6 +8,8 @@ namespace Mediashare\Crawler;
 class Config {
     public $webspider = true; // Crawl all website
     public $verbose = false; // Prompt output progress bar
+    public $pathRequires = [];
+    public $pathExceptions = [];
 
     public function getWebspider(): ?bool
     {
@@ -28,6 +30,22 @@ class Config {
     public function setVerbose(bool $verbose): self
     {
         $this->verbose = $verbose;
+        return $this;
+    }
+
+    public function getPathRequires(): ?array {
+        return $this->pathRequires;
+    }
+    public function setPathRequires(array $requires): self {
+        $this->pathRequires = $requires;
+        return $this;
+    }
+
+    public function getPathExceptions(): ?array {
+        return $this->pathExceptions;
+    }
+    public function setPathExceptions(array $exceptions): self {
+        $this->pathExceptions = $exceptions;
         return $this;
     }
 }
