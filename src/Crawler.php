@@ -116,6 +116,9 @@ Class Crawler
             if ($this->config->getWebspider() && \count($this->wait) > 0):
                 $max_counter = $counter + \count($this->wait);
             endif;
+            if ($max_counter < $counter):
+        		$max_counter = $counter;
+        	endif;
             $message = "(".$counter."/".$max_counter.") [".$url."]"; 
             $pourcent = ($counter/$max_counter) * 100;
             if ($pourcent >= 90):
