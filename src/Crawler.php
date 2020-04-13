@@ -59,8 +59,17 @@ Class Crawler
     }
 
     private function modules(Scraper $scraper) {
-        $results = $this->config->modules->run($scraper);
-        return $results;
+        $modules = $this->config->getModules();
+        if ($modules):
+            $modules = $this->config->getModules()->run($scraper);
+            foreach ($modules as $moduleName => $result):
+                $results[$moduleName] = $result;
+            endforeach;
+            return $results;
+        else:
+            return null;
+        endif;
+
     }
 
     private function newUrls($scraper) {

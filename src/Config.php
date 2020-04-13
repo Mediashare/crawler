@@ -50,6 +50,14 @@ class Config {
         return $this;
     }
 
+    public function getModules() {
+        if ($this->modules):
+            return $this->modules;
+        else:
+            return null;
+        endif;
+    }
+
     public function setModules($modules): self {
         $this->modules = $modules;
         return $this;
