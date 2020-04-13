@@ -117,8 +117,6 @@ Class Crawler
                 $max_counter = $counter + \count($this->wait);
             endif;
             $message = "(".$counter."/".$max_counter.") [".$url."]"; 
-
-            var_dump($counter, $max_counter);die;
             $pourcent = ($counter/$max_counter) * 100;
             if ($pourcent >= 90):
                 $climate->lightGreen();
