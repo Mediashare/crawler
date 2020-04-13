@@ -15,6 +15,7 @@ Class Crawler
 {
     public $url;
     public $config;
+    public $modules;
     public $urls = [];
     public $wait = []; // Urls list not crawled
     function __construct(string $url, ?Config $config = null) {
@@ -46,13 +47,20 @@ Class Crawler
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
+        // Modules
+        $modules = $this->modules($scraper);
+        $this->modules[] = $modules;
         // Add new urls in the wait list
         $this->newUrls($scraper);
         $this->urls[(string) $url] = $scraper; // Record Scraper
         unset($this->wait[(string) $url]); // Remove url to the list
         $this->output($url); // Output
-
         return $scraper;
+    }
+
+    private function modules(Scraper $scraper) {
+        $results = $this->config->modules->run($scraper);
+        return $results;
     }
 
     private function newUrls($scraper) {

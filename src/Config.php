@@ -10,6 +10,7 @@ class Config {
     public $verbose = false; // Prompt output progress bar
     public $pathRequires = [];
     public $pathExceptions = [];
+    public $modules = [];
 
     public function getWebspider(): ?bool
     {
@@ -46,6 +47,11 @@ class Config {
     }
     public function setPathExceptions(array $exceptions): self {
         $this->pathExceptions = $exceptions;
+        return $this;
+    }
+
+    public function setModules($modules): self {
+        $this->modules = $modules;
         return $this;
     }
 }
