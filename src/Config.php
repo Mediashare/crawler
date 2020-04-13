@@ -10,7 +10,7 @@ class Config {
     public $verbose = false; // Prompt output progress bar
     public $pathRequires = [];
     public $pathExceptions = [];
-    public $modules = [];
+    private $modules = [];
 
     public function getWebspider(): ?bool
     {
