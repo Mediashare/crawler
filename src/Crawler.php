@@ -46,14 +46,14 @@ Class Crawler
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
-        $this->progressBar($url); // Output ProgressBar
-        // Modules
-        $modules = $this->modules($scraper);
-        $this->modules[$url] = $modules;
         // Add new urls in the wait list
         $this->newUrls($scraper);
         $this->urls[(string) $url] = $scraper; // Record Scraper
         unset($this->wait[(string) $url]); // Remove url to the list
+        $this->progressBar($url); // Output ProgressBar
+        // Modules
+        $modules = $this->modules($scraper);
+        $this->modules[$url] = $modules;
         return $scraper;
     }
 
@@ -113,7 +113,7 @@ Class Crawler
             $climate = new CLImate();
             $counter = count($this->urls);
             $max_counter = 1;
-            if ($this->config->getWebspider()):
+            if ($this->config->getWebspider() && \count($this->wait) > 0):
                 $max_counter = $counter + \count($this->wait);
             endif;
             $message = "(".$counter."/".$max_counter.") [".$url."]"; 
