@@ -46,6 +46,7 @@ Class Crawler
     public function scrape(string $url): Scraper {
         $scraper = new Scraper($url);
         $scraper->run();
+        $this->progressBar($url); // Output ProgressBar
         // Modules
         $modules = $this->modules($scraper);
         $this->modules[$url] = $modules;
@@ -53,7 +54,6 @@ Class Crawler
         $this->newUrls($scraper);
         $this->urls[(string) $url] = $scraper; // Record Scraper
         unset($this->wait[(string) $url]); // Remove url to the list
-        $this->output($url); // Output
         return $scraper;
     }
 
@@ -108,7 +108,7 @@ Class Crawler
      * @param string $url
      * @return progressBar
      */
-    private function output(string $url) {
+    private function progressBar(string $url) {
         if ($this->config->getVerbose()) {
             $climate = new CLImate();
             $counter = count($this->urls);
