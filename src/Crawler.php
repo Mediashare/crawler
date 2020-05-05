@@ -60,6 +60,7 @@ Class Crawler
     private function modules(Scraper $scraper) {
         $modules = $this->config->getModules();
         if ($modules):
+            $results = [];
             $modules = $this->config->getModules()->run($scraper);
             foreach ($modules as $moduleName => $result):
                 $results[$moduleName] = $result;
